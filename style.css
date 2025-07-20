@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inter";
+}
+
+:root{
+    --font-size-sm:10px;
+    --font-size-md:14px;
+    --font-heading:25px;
+    --margin-sm:10px ;
+    --padding-sm:10px;
+    --primary-bg:#ffffff;
+    --secondary-bg:#ddd;
+    --primary-btn-bg:black;
+    --primary-btn-color:#fff;
+    --btn-border-radius:8px;
+    --border-clr:gray;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+main:nth-child(n*){
+    background-color: var(--secondary-bg);
+    border: 1px solid gray;
+}
+main:nth-child(n+1){
+    background-color: var(--primary-bg);
+}
+.flex{
+    display: flex;
+}
+.justify-conter{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-sb{
+    justify-content: space-between;
+}
+.list-style-n{
+    list-style: none;
+}
+.a-sytle-n{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    padding: 10px;
+    border-radius: 8px;
+}
+.btn-black{
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-color);
+}
+nav{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid var(--border-clr);
+    align-items: center;
+}
+nav aside strong{
+    font-size: var(--font-heading);
+    font-weight: 700;
+}
+nav aside ul {
+    gap: 20px;
+    
+}
+nav aside ul li{
+    text-decoration: none;
+    color:#ffffff
+}
+.view-sm{
+    display: none;
+}
+
+
+section{
+    height: 100vh;
+    border-bottom: 2px solid gray;
+}
+main:nth-child(n){
+    background-color: green;
+}
+main:nth-child(2n+1){
+    background-color: green;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .hide-sm{
+        display: none;
+    }
+    .view-sm{
+        display: block;
+    }
+}
+ul li{
+    color: black;
+    font-size: var(--font-size-md);
+}
