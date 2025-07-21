@@ -1,0 +1,33 @@
+.flex{
+    display: flex;
+}
+.justify-conter{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-sb{
+    justify-content: space-between;
+}
+.list-style-n{
+    list-style: none;
+}
+.py-20{
+    padding-block: calc(var(--spacing)*5);
+}
+.a-sytle-n{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    padding: 10px;
+    border-radius: 8px;
+}
+.btn-black{
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-color);
+}
