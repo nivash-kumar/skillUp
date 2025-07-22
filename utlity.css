@@ -50,3 +50,16 @@
 .br-8{
     border-radius: var(--radius);
 }
+.viewAllBtn{
+    padding: var(--spacing);
+    height: 30px;
+    font-size: calc(var(--font-size)*1.2);
+    border-radius: var(--radius);
+    text-align: center;
+}
+.text-wrap{
+    text-wrap: wrap;
+}
+.invert{
+    filter: invert(1);
+}

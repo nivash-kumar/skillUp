@@ -31,7 +31,7 @@
     </nav>
 
     <main class="mainBody flex">
-        <section class="about flex py-20 justify-center" id="about">
+        <section class="about flex py-20 justify-center align-center" id="about">
             <div class="info">
                 <h1>Learn New Skills with Expert-led Online Courses</h1>
                 <p>Join thousands of students worldwide and master in demand skills though Our comprehensive online
@@ -59,7 +59,8 @@
                 </div>
             </div>
             <div class="mainImg br-8">
-                <img class="br-8" src="https://digitallearning.eletsonline.com/wp-content/uploads/2019/03/Online-courses.jpg"
+                <img class="br-8"
+                    src="https://digitallearning.eletsonline.com/wp-content/uploads/2019/03/Online-courses.jpg"
                     alt="study image">
             </div>
 
@@ -77,79 +78,100 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {courses.map((course) => (
-                    <CourseCard key={course.id} course={course} />
-                    ))}
+                <div class="card-p flex ">
+                    <!--courses card one  -->
+                    <div class="course-card">
+                        <img src="/images/photo-1516321318423-f06f85e504b3.avif" alt="Course Image">
+                        <div class="badge-course-name">Web Dev</div>
+                        <div class="badge-discount">50% OFF</div>
+
+                        <div class="course-content">
+                            <span class="tag-level">Beginner</span>
+                            <div class="course-title">Introduction to HTML & CSS</div>
+                            <div class="educator-name">By singh KN</div>
+                            <div class="course-description text-wrap">
+                                Learn how to build beautiful websites using HTML5 and CSS3 with modern tools and best
+                                practices.
+                            </div>
+
+                            <div class="course-details">
+                                <span>⏱ 6 hrs</span>
+                                <span>👥 1200+</span>
+                                <span>⭐ 4.7/5</span>
+                            </div>
+
+                            <div class="price-section flex ">
+                                <div class="flex">
+                                    <span class="price">₹499</span>
+                                    <span class="mrp">₹999</span>
+                                </div>
+                                <button class="enroll-btn">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--courses card two  -->
+                    <div class="course-card">
+                        <img src="/images/photo-1516321318423-f06f85e504b3.avif" alt="Course Image">
+                        <div class="badge-course-name">Web Dev</div>
+                        <div class="badge-discount">50% OFF</div>
+
+                        <div class="course-content">
+                            <span class="tag-level">Beginner</span>
+                            <div class="course-title">Introduction to HTML & CSS</div>
+                            <div class="educator-name">By singh KN</div>
+                            <div class="course-description text-wrap">
+                                Learn how to build beautiful websites using HTML5 and CSS3 with modern tools and best
+                                practices.
+                            </div>
+
+                            <div class="course-details">
+                                <span>⏱ 6 hrs</span>
+                                <span>👥 1200+</span>
+                                <span>⭐ 4.7/5</span>
+                            </div>
+
+                            <div class="price-section flex ">
+                                <div class="flex">
+                                    <span class="price">₹499</span>
+                                    <span class="mrp">₹999</span>
+                                </div>
+                                <button class="enroll-btn">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--courses card three  -->
+                    <div class="course-card">
+                        <img src="/images/photo-1516321318423-f06f85e504b3.avif" alt="Course Image">
+                        <div class="badge-course-name">Web Dev</div>
+                        <div class="badge-discount">50% OFF</div>
+
+                        <div class="course-content">
+                            <span class="tag-level">Beginner</span>
+                            <div class="course-title">Introduction to HTML & CSS</div>
+                            <div class="educator-name">By singh KN</div>
+                            <div class="course-description text-wrap">
+                                Learn how to build beautiful websites using HTML5 and CSS3 with modern tools and best
+                                practices.
+                            </div>
+
+                            <div class="course-details">
+                                <span>⏱ 6 hrs</span>
+                                <span>👥 1200+</span>
+                                <span>⭐ 4.7/5</span>
+                            </div>
+
+                            <div class="price-section flex ">
+                                <div class="flex">
+                                    <span class="price">₹499</span>
+                                    <span class="mrp">₹999</span>
+                                </div>
+                                <button class="enroll-btn">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="text-center mt-12">
-                    <Button variant="outline" size="lg">
-                        View All Courses
-                    </Button>
-                </div>
             </div>
-        </section>
-
-
-        <section class="courses py-20" id="courses">
-            <Card class="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div class="relative">
-
-                </div>
-
-                <CardContent class="p-6">
-                    <div class="space-y-3">
-                        <Badge variant="secondary" class="text-xs">
-                            {course.level}
-                        </Badge>
-
-                        <h3 class="line-clamp-2 leading-tight">
-                            {course.title}
-                        </h3>
-
-                        <p class="text-sm text-muted-foreground">
-                            by {course.instructor}
-                        </p>
-
-                        <p class="text-sm text-muted-foreground line-clamp-2">
-                            {course.description}
-                        </p>
-
-                        <div class="flex items-center gap-4 text-sm text-muted-foreground">
-                            <div class="flex items-center gap-1">
-                                <Clock size={14} />
-                                {course.duration}
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <Users size={14} />
-                                {course.students.toLocaleString()}
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <Star size={14} class="fill-yellow-400 text-yellow-400" />
-                                {course.rating}
-                            </div>
-                        </div>
-                    </div>
-                </CardContent>
-
-                <CardFooter class="px-6 pb-6 pt-0">
-                    <div class="flex items-center justify-between w-full">
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2">
-                                <span class="text-xl">${course.price}</span>
-                                {course.originalPrice && (
-                                <span class="text-sm text-muted-foreground line-through">
-                                    ${course.originalPrice}
-                                </span>
-                                )}
-                            </div>
-                        </div>
-                        <Button>Enroll Now</Button>
-                    </div>
-                </CardFooter>
-            </Card>
-
         </section>
 
         <section id="testimonials" class="py-20 bg-background">
@@ -163,41 +185,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {testimonials.map((testimonial) => (
-                    <Card key={testimonial.id} class="border-none shadow-lg">
-                        <CardContent class="p-8">
-                            <div class="space-y-6">
-                                {/* Rating */}
-                                <div class="flex gap-1">
-                                    {Array.from({ length: testimonial.rating }).map((_, i) => (
-                                    <Star key={i} size={20} class="fill-yellow-400 text-yellow-400" />
-                                    ))}
-                                </div>
 
-                                {/* Testimonial Text */}
-                                <blockquote class="text-lg leading-relaxed">
-                                    "{testimonial.text}"
-                                </blockquote>
-
-                                {/* Author */}
-                                <div class="flex items-center gap-4 pt-4 border-t border-border">
-                                    <Avatar class="w-12 h-12">
-                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                                        <AvatarFallback>
-                                            {testimonial.name.split(' ').map(n => n[0]).join('')}
-                                        </AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <p class="font-medium">{testimonial.name}</p>
-                                        <p class="text-sm text-muted-foreground">{testimonial.role}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    ))}
-                </div>
             </div>
         </section>
 
@@ -219,46 +207,9 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingPlans.map((plan) => (
-                    <Card key={plan.id} class={`relative ${plan.popular ? 'border-primary shadow-xl scale-105' : ''
-                        }`}>
-                        {plan.popular && (
-                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                            <Badge class="bg-primary text-primary-foreground px-4 py-1">
-                                Most Popular
-                            </Badge>
-                        </div>
-                        )}
-
-                        <CardHeader class="text-center pb-6">
-                            <CardTitle class="text-2xl mb-2">{plan.name}</CardTitle>
-                            <div class="space-y-2">
-                                <div class="flex items-baseline justify-center gap-1">
-                                    <span class="text-4xl">${plan.price}</span>
-                                    <span class="text-muted-foreground">/{plan.period}</span>
-                                </div>
-                                <p class="text-sm text-muted-foreground">{plan.description}</p>
-                            </div>
-                        </CardHeader>
-
-                        <CardContent class="space-y-6">
-                            <Button class="w-full" variant={plan.popular ? 'default' : 'outline' }>
-                                {plan.buttonText}
-                            </Button>
-
-                            <div class="space-y-3">
-                                {plan.features.map((feature, index) => (
-                                <div key={index} class="flex items-start gap-3">
-                                    <Check size={16} class="text-green-500 flex-shrink-0 mt-0.5" />
-                                    <span class="text-sm">{feature}</span>
-                                </div>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </Card>
-                    ))}
-                </div>
+                <div class="">
+                    
+                    
 
                 <div class="text-center mt-12 space-y-4">
                     <p class="text-sm text-muted-foreground">
@@ -274,121 +225,124 @@
 
 
 
-    <footer class="flex ">
-        <div class="flex">
-            <div class="flex justify-sb">
-                <!-- <h2>skillUp</h2> -->
-                <div class="flex space-y-4">
-                    <h3 class="">skillUp</h3>
-                    <p class="">
-                        Empowering learners worldwide with high-quality online education.
-                        Join millions of students and advance your career with our expert-led courses.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#">
-                            <img src="https://th.bing.com/th/id/ODF.FFsV6sq1f2tH6MPAliUvzw?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" title="facebook">
-                        </a>
-                        <a href="#">
-                            <img src="https://th.bing.com/th/id/ODF.fYZFrS0zcRTBamv-F6K_ww?w=32&h=32&qlt=90&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="Twitter" title="Twitter">
-                        </a>
-                        <a href="#">
-                            <img src="https://th.bing.com/th/id/ODF.Tw-tjGfaKLIkitkJNlB7SA?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="instagram" title="instagram">
-                        </a>
-                        
-                        <a href="#">
-                            <img src="https://th.bing.com/th/id/ODF.F8hkx5f_DpSQJ5Rg49E4Pg?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="linkdin" title="linkdin">
-                        </a>
-                        <a href="#">
-                            <img src="https://th.bing.com/th/id/ODF.MrzzDTMlZsq_k5DWWmv7Hw?w=32&h=32&qlt=90&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="youtube" title="youtube">
-                        </a>
-                    </div>
-                </div>
+    <footer class=" ">
+        <div class="grid justify-sb">
+            <!-- <h2>skillUp</h2> -->
+            <div class="flex space-y-4">
+                <h3 class="">skillUp</h3>
+                <p class="">
+                    Empowering learners worldwide with high-quality online education.
+                    Join millions of students and advance your career with our expert-led courses.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#">
+                        <img class="invert" src="images/facebook.svg"
+                            title="facebook">
+                    </a>
+                    <a href="#">
+                        <img class="invert" src="images/twiter.svg"
+                            alt="Twitter" title="Twitter">
+                    </a>
+                    <a href="#">
+                        <img class="invert" src="images/instagram.svg"
+                            alt="instagram" title="instagram">
+                    </a>
 
-                <!-- {/* Quick Links */} -->
-                <div class="space-y-4">
-                    <h4>Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">About
-                                Us</a></li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Courses</a>
-                        </li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Instructors</a>
-                        </li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Blog</a>
-                        </li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Success
-                                Stories</a></li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Help
-                                Center</a></li>
-                    </ul>
-                </div>
-
-                <!-- {/* Categories */} -->
-                <div class="space-y-4">
-                    <h4>Course Categories</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Web
-                                Development</a></li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Data
-                                Science</a></li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Digital
-                                Marketing</a></li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Design</a>
-                        </li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Business</a>
-                        </li>
-                        <li><a href="#"
-                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Photography</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- {/* Contact Info */} -->
-                <div class="space-y-4">
-                    <h4>Contact Us</h4>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex items-center gap-3">
-                            <Mail size={16} class="text-primary-foreground/60" />
-                            <span class="text-primary-foreground/80">support@skillup.com</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-primary-foreground/80">+91 7970587571</span>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-primary-foreground/80">123 gandhimaidan.<br />Patna, 800001</span>
-                        </div>
-                    </div>
+                    <a href="#">
+                        <img class="invert" src="images/linkdin.svg"
+                            alt="linkdin" title="linkdin">
+                    </a>
+                    <a href="#">
+                        <img class="invert" src="images/youtube.svg"
+                            alt="youtube" title="youtube">
+                    </a>
                 </div>
             </div>
 
-            <Separator class="my-8 bg-primary-foreground/20" />
+            <!-- {/* Quick Links */} -->
+            <div class="space-y-4">
+                <h4>Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">About
+                            Us</a></li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Courses</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Instructors</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Blog</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Success
+                            Stories</a></li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Help
+                            Center</a></li>
+                </ul>
+            </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-                <p class="text-primary-foreground/80">
-                    © 2025 skillUp. All rights reserved.
-                </p>
-                <div class="flex gap-6">
-                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                        Privacy Policy
-                    </a>
-                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                        Terms of Service
-                    </a>
-                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                        Cookie Policy
-                    </a>
+            <!-- {/* Categories */} -->
+            <div class="space-y-4">
+                <h4>Course Categories</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Web
+                            Development</a></li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Data
+                            Science</a></li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Digital
+                            Marketing</a></li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Design</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Business</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Photography</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- {/* Contact Info */} -->
+            <div class="space-y-4">
+                <h4>Contact Us</h4>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center gap-3">
+                        <Mail size={16} class="text-primary-foreground/60" />
+                        <span class="text-primary-foreground/80">support@skillup.com</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-primary-foreground/80">+91 7970587571</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-primary-foreground/80">123 gandhimaidan.<br />Patna, 800001</span>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <Separator class="my-8 bg-primary-foreground/20" />
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <p class="text-primary-foreground/80">
+                © 2025 skillUp. All rights reserved.
+            </p>
+            <div class="flex gap-6">
+                <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    Privacy Policy
+                </a>
+                <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    Terms of Service
+                </a>
+                <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    Cookie Policy
+                </a>
             </div>
         </div>
     </footer>
