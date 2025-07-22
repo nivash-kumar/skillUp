@@ -1,7 +1,7 @@
 .flex{
     display: flex;
 }
-.justify-conter{
+.justify-center{
     justify-content: center;
 }
 .align-center{
@@ -10,11 +10,27 @@
 .justify-around{
     justify-content: space-around;
 }
+.just
 .justify-sb{
     justify-content: space-between;
 }
+.flex-column{
+    flex-direction: column;
+}
 .list-style-n{
     list-style: none;
+}
+.grid{
+    display: grid;
+}
+.grid-cols-2{
+    grid-template-columns: 1fr 1fr;
+}
+.space-btwn{
+    justify-content: space-between;
+}
+.gap{
+    gap: calc(var(--spacing)*6);
 }
 .py-20{
     padding-block: calc(var(--spacing)*5);
@@ -28,6 +44,9 @@
     border-radius: 8px;
 }
 .btn-black{
-    background-color: var(--primary-btn-bg);
-    color: var(--primary-btn-color);
+    background-color: var(--foreground);
+    color: var(--primary-foreground);
+}
+.br-8{
+    border-radius: var(--radius);
 }

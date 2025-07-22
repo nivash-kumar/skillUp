@@ -30,18 +30,18 @@
         </aside>
     </nav>
 
-    <main class="mainBody">
-        <section class="about flex py-20 " id="about">
+    <main class="mainBody flex">
+        <section class="about flex py-20 justify-center" id="about">
             <div class="info">
-                <h2>Learn New Skills with Expert-led Online Courses</h2>
+                <h1>Learn New Skills with Expert-led Online Courses</h1>
                 <p>Join thousands of students worldwide and master in demand skills though Our comprehensive online
                     courses. Learn form industry experts get hands-on experience, and advance your career with
                     certificates that matter.</p>
-                <div class="btn-p">
-                    <button>Browse Courses</button>
-                    <button>How it Works</button>
+                <div class="btn-p flex ">
+                    <button class="btn">Browse Courses</button>
+                    <button class="btn">How it Works</button>
                 </div>
-                <div class="enrolment flex">
+                <div class="enrolment flex space-btwn">
                     <div class="active-stud">
                         <strong>10K+</strong>
                         <p>Active student</p>
@@ -58,38 +58,32 @@
 
                 </div>
             </div>
-            <div class="mainImg">
-                <img src="https://digitallearning.eletsonline.com/wp-content/uploads/2019/03/Online-courses.jpg"
+            <div class="mainImg br-8">
+                <img class="br-8" src="https://digitallearning.eletsonline.com/wp-content/uploads/2019/03/Online-courses.jpg"
                     alt="study image">
             </div>
-            <!-- <p>this is section 1</p> -->
 
         </section>
 
-        <!-- <section class="About py-20" id="About">
-            <p>this is section 2</p>
-
-        </section> -->
-
-        <section id="courses" className="py-20 bg-muted/30">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-4xl mb-4">
+        <section id="courses" class="py-20 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl mb-4">
                         Popular Courses
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Choose from our most popular courses designed by industry experts to help you succeed in your
                         career goals.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {courses.map((course) => (
                     <CourseCard key={course.id} course={course} />
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
+                <div class="text-center mt-12">
                     <Button variant="outline" size="lg">
                         View All Courses
                     </Button>
@@ -97,63 +91,55 @@
             </div>
         </section>
 
-        
+
         <section class="courses py-20" id="courses">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="relative">
-                    <ImageWithFallback src={course.image} alt={course.title} className="w-full h-48 object-cover" />
-                    <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground">
-                        {course.category}
-                    </Badge>
-                    {course.originalPrice && (
-                    <Badge variant="destructive" className="absolute top-3 right-3">
-                        {Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF
-                    </Badge>
-                    )}
+            <Card class="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="relative">
+
                 </div>
 
-                <CardContent className="p-6">
-                    <div className="space-y-3">
-                        <Badge variant="secondary" className="text-xs">
+                <CardContent class="p-6">
+                    <div class="space-y-3">
+                        <Badge variant="secondary" class="text-xs">
                             {course.level}
                         </Badge>
 
-                        <h3 className="line-clamp-2 leading-tight">
+                        <h3 class="line-clamp-2 leading-tight">
                             {course.title}
                         </h3>
 
-                        <p className="text-sm text-muted-foreground">
+                        <p class="text-sm text-muted-foreground">
                             by {course.instructor}
                         </p>
 
-                        <p className="text-sm text-muted-foreground line-clamp-2">
+                        <p class="text-sm text-muted-foreground line-clamp-2">
                             {course.description}
                         </p>
 
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1">
+                        <div class="flex items-center gap-4 text-sm text-muted-foreground">
+                            <div class="flex items-center gap-1">
                                 <Clock size={14} />
                                 {course.duration}
                             </div>
-                            <div className="flex items-center gap-1">
+                            <div class="flex items-center gap-1">
                                 <Users size={14} />
                                 {course.students.toLocaleString()}
                             </div>
-                            <div className="flex items-center gap-1">
-                                <Star size={14} className="fill-yellow-400 text-yellow-400" />
+                            <div class="flex items-center gap-1">
+                                <Star size={14} class="fill-yellow-400 text-yellow-400" />
                                 {course.rating}
                             </div>
                         </div>
                     </div>
                 </CardContent>
 
-                <CardFooter className="px-6 pb-6 pt-0">
-                    <div className="flex items-center justify-between w-full">
-                        <div className="space-y-1">
-                            <div className="flex items-center gap-2">
-                                <span className="text-xl">${course.price}</span>
+                <CardFooter class="px-6 pb-6 pt-0">
+                    <div class="flex items-center justify-between w-full">
+                        <div class="space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xl">${course.price}</span>
                                 {course.originalPrice && (
-                                <span className="text-sm text-muted-foreground line-through">
+                                <span class="text-sm text-muted-foreground line-through">
                                     ${course.originalPrice}
                                 </span>
                                 )}
@@ -166,45 +152,45 @@
 
         </section>
 
-        <section id="testimonials" className="py-20 bg-background">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-4xl mb-4">
+        <section id="testimonials" class="py-20 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl mb-4">
                         What Our Students Say
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Join thousands of successful graduates who have transformed their careers with our courses.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {testimonials.map((testimonial) => (
-                    <Card key={testimonial.id} className="border-none shadow-lg">
-                        <CardContent className="p-8">
-                            <div className="space-y-6">
+                    <Card key={testimonial.id} class="border-none shadow-lg">
+                        <CardContent class="p-8">
+                            <div class="space-y-6">
                                 {/* Rating */}
-                                <div className="flex gap-1">
+                                <div class="flex gap-1">
                                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                                    <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
+                                    <Star key={i} size={20} class="fill-yellow-400 text-yellow-400" />
                                     ))}
                                 </div>
 
                                 {/* Testimonial Text */}
-                                <blockquote className="text-lg leading-relaxed">
+                                <blockquote class="text-lg leading-relaxed">
                                     "{testimonial.text}"
                                 </blockquote>
 
                                 {/* Author */}
-                                <div className="flex items-center gap-4 pt-4 border-t border-border">
-                                    <Avatar className="w-12 h-12">
+                                <div class="flex items-center gap-4 pt-4 border-t border-border">
+                                    <Avatar class="w-12 h-12">
                                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                                         <AvatarFallback>
                                             {testimonial.name.split(' ').map(n => n[0]).join('')}
                                         </AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <p className="font-medium">{testimonial.name}</p>
-                                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                                        <p class="font-medium">{testimonial.name}</p>
+                                        <p class="text-sm text-muted-foreground">{testimonial.role}</p>
                                     </div>
                                 </div>
                             </div>
@@ -222,50 +208,50 @@
         </section>
 
 
-        <section id="pricing" className="py-20 bg-background">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-4xl mb-4">
+        <section id="pricing" class="py-20 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl mb-4">
                         Choose Your Plan
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Start with a 14-day free trial. No credit card required. Cancel anytime.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {pricingPlans.map((plan) => (
-                    <Card key={plan.id} className={`relative ${plan.popular ? 'border-primary shadow-xl scale-105' : ''
+                    <Card key={plan.id} class={`relative ${plan.popular ? 'border-primary shadow-xl scale-105' : ''
                         }`}>
                         {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                            <Badge className="bg-primary text-primary-foreground px-4 py-1">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <Badge class="bg-primary text-primary-foreground px-4 py-1">
                                 Most Popular
                             </Badge>
                         </div>
                         )}
 
-                        <CardHeader className="text-center pb-6">
-                            <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
-                            <div className="space-y-2">
-                                <div className="flex items-baseline justify-center gap-1">
-                                    <span className="text-4xl">${plan.price}</span>
-                                    <span className="text-muted-foreground">/{plan.period}</span>
+                        <CardHeader class="text-center pb-6">
+                            <CardTitle class="text-2xl mb-2">{plan.name}</CardTitle>
+                            <div class="space-y-2">
+                                <div class="flex items-baseline justify-center gap-1">
+                                    <span class="text-4xl">${plan.price}</span>
+                                    <span class="text-muted-foreground">/{plan.period}</span>
                                 </div>
-                                <p className="text-sm text-muted-foreground">{plan.description}</p>
+                                <p class="text-sm text-muted-foreground">{plan.description}</p>
                             </div>
                         </CardHeader>
 
-                        <CardContent className="space-y-6">
-                            <Button className="w-full" variant={plan.popular ? 'default' : 'outline' }>
+                        <CardContent class="space-y-6">
+                            <Button class="w-full" variant={plan.popular ? 'default' : 'outline' }>
                                 {plan.buttonText}
                             </Button>
 
-                            <div className="space-y-3">
+                            <div class="space-y-3">
                                 {plan.features.map((feature, index) => (
-                                <div key={index} className="flex items-start gap-3">
-                                    <Check size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
-                                    <span className="text-sm">{feature}</span>
+                                <div key={index} class="flex items-start gap-3">
+                                    <Check size={16} class="text-green-500 flex-shrink-0 mt-0.5" />
+                                    <span class="text-sm">{feature}</span>
                                 </div>
                                 ))}
                             </div>
@@ -274,8 +260,8 @@
                     ))}
                 </div>
 
-                <div className="text-center mt-12 space-y-4">
-                    <p className="text-sm text-muted-foreground">
+                <div class="text-center mt-12 space-y-4">
+                    <p class="text-sm text-muted-foreground">
                         All plans include 14-day free trial • No setup fees • Cancel anytime
                     </p>
                     <Button variant="ghost">
@@ -288,116 +274,118 @@
 
 
 
-    <footer className=" ">
-        <div className="">
-            <div className="flex justify-sb">
+    <footer class="flex ">
+        <div class="flex">
+            <div class="flex justify-sb">
                 <!-- <h2>skillUp</h2> -->
-                <div className="space-y-4">
-                    <h3 className="">skillUp</h3>
-                    <p className="">
+                <div class="flex space-y-4">
+                    <h3 class="">skillUp</h3>
+                    <p class="">
                         Empowering learners worldwide with high-quality online education.
                         Join millions of students and advance your career with our expert-led courses.
                     </p>
-                    <div className="flex space-x-4">
+                    <div class="flex space-x-4">
+                        <a href="#">
+                            <img src="https://th.bing.com/th/id/ODF.FFsV6sq1f2tH6MPAliUvzw?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" title="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="https://th.bing.com/th/id/ODF.fYZFrS0zcRTBamv-F6K_ww?w=32&h=32&qlt=90&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="Twitter" title="Twitter">
+                        </a>
+                        <a href="#">
+                            <img src="https://th.bing.com/th/id/ODF.Tw-tjGfaKLIkitkJNlB7SA?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="instagram" title="instagram">
+                        </a>
                         
-                        <Facebook size={20}
-                            className="text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-                        <Twitter size={20}
-                            className="text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-                        <Instagram size={20}
-                            className="text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-                        <Linkedin size={20}
-                            className="text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
-                        <Youtube size={20}
-                            className="text-primary-foreground/60 hover:text-primary-foreground cursor-pointer transition-colors" />
+                        <a href="#">
+                            <img src="https://th.bing.com/th/id/ODF.F8hkx5f_DpSQJ5Rg49E4Pg?w=32&h=32&qlt=93&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="linkdin" title="linkdin">
+                        </a>
+                        <a href="#">
+                            <img src="https://th.bing.com/th/id/ODF.MrzzDTMlZsq_k5DWWmv7Hw?w=32&h=32&qlt=90&pcl=fffffa&o=6&cb=thwsc4&pid=1.2" alt="youtube" title="youtube">
+                        </a>
                     </div>
                 </div>
 
                 <!-- {/* Quick Links */} -->
-                <div className="space-y-4">
+                <div class="space-y-4">
                     <h4>Quick Links</h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul class="space-y-2 text-sm">
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">About
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">About
                                 Us</a></li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Courses</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Courses</a>
                         </li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Instructors</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Instructors</a>
                         </li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Blog</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Blog</a>
                         </li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Success
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Success
                                 Stories</a></li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Help
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Help
                                 Center</a></li>
                     </ul>
                 </div>
 
                 <!-- {/* Categories */} -->
-                <div className="space-y-4">
+                <div class="space-y-4">
                     <h4>Course Categories</h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul class="space-y-2 text-sm">
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Web
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Web
                                 Development</a></li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Data
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Data
                                 Science</a></li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Digital
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Digital
                                 Marketing</a></li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Design</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Design</a>
                         </li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Business</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Business</a>
                         </li>
                         <li><a href="#"
-                                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Photography</a>
+                                class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Photography</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- {/* Contact Info */} -->
-                <div className="space-y-4">
+                <div class="space-y-4">
                     <h4>Contact Us</h4>
-                    <div className="space-y-3 text-sm">
-                        <div className="flex items-center gap-3">
-                            <Mail size={16} className="text-primary-foreground/60" />
-                            <span className="text-primary-foreground/80">support@coursehub.com</span>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3">
+                            <Mail size={16} class="text-primary-foreground/60" />
+                            <span class="text-primary-foreground/80">support@skillup.com</span>
                         </div>
-                        <div className="flex items-center gap-3">
-                            <Phone size={16} className="text-primary-foreground/60" />
-                            <span className="text-primary-foreground/80">+1 (555) 123-4567</span>
+                        <div class="flex items-center gap-3">
+                            <span class="text-primary-foreground/80">+91 7970587571</span>
                         </div>
-                        <div className="flex items-start gap-3">
-                            <MapPin size={16} className="text-primary-foreground/60 mt-0.5" />
-                            <span className="text-primary-foreground/80">123 Education St.<br />San Francisco, CA
-                                94105</span>
+                        <div class="flex items-start gap-3">
+                            <span class="text-primary-foreground/80">123 gandhimaidan.<br />Patna, 800001</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <Separator className="my-8 bg-primary-foreground/20" />
+            <Separator class="my-8 bg-primary-foreground/20" />
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-                <p className="text-primary-foreground/80">
-                    © 2025 CourseHub. All rights reserved.
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p class="text-primary-foreground/80">
+                    © 2025 skillUp. All rights reserved.
                 </p>
-                <div className="flex gap-6">
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <div class="flex gap-6">
+                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                         Privacy Policy
                     </a>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                         Terms of Service
                     </a>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                    <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                         Cookie Policy
                     </a>
                 </div>
