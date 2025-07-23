@@ -339,6 +339,8 @@ main section {
 
 
 
+
+
 /* footer section start  */
 footer {
     background-color: var(--footer-bg);
@@ -364,17 +366,6 @@ footer .footer-cont .footer-child-div {
     flex: 0 0 auto;
 }
 
-/* footer .footer-cont .footer-child-div h4{
-    font-size: calc(var(--font-size)*1.5);
-    margin-bottom: var(--spacing);
-}
-
-.footer-child-div h3 {
-    font-size: 2rem;
-    padding: auto auto var(--spacing) auto;
-    margin-bottom: 1rem;
-    width: 100%;
-} */
 footer h3,
 footer h4 {
     font-size: calc(var(--font-size) * 1.5);
@@ -401,11 +392,12 @@ footer div div ul li {
 }
 .footer-foot p{
     font-size: calc(var(--font-size)*1.5);
+    padding: var(--spacing);
 }
 .footer-foot div{
     justify-content: space-around;
 }
-
+/* ///footer end here  */
 
 
 
@@ -423,6 +415,9 @@ footer div div ul li {
 }
 
 @media screen and (max-width: 640px) {
+    :root{
+        --font-size:10px;
+    }
     .hide-sm {
         display: none;
     }
@@ -430,6 +425,9 @@ footer div div ul li {
     .view-sm {
         display: block;
     }
+    /* .course-card{
+        width: cacl(var(--spacing)*16);
+    } */
 
     .btn-p {
         flex-direction: column;
@@ -449,5 +447,10 @@ footer div div ul li {
         width: 90%;
         align-items: flex-start;
     }
+    .footer-foot div{
+        padding: var(--spacing);
+    }
+    .footer-foot div a{
+        font-size: calc(var(--font-size)*1);
 }
 
