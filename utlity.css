@@ -26,6 +26,9 @@
 .grid-cols-2{
     grid-template-columns: 1fr 1fr;
 }
+.grid-cols-4{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .space-btwn{
     justify-content: space-between;
 }
@@ -49,6 +52,7 @@
 }
 .br-8{
     border-radius: var(--radius);
+    border-radius:1rem;
 }
 .viewAllBtn{
     padding: var(--spacing);
@@ -62,4 +66,8 @@
 }
 .invert{
     filter: invert(1);
+}
+ul li {
+    color: black;
+    font-size: var(--font-size);
 }
