@@ -6,8 +6,11 @@
     box-sizing: border-box;
     font-family: "inter";
     border: 0 solid;
-    overflow-x: hidden;
+    
     transition: 0.3s;
+    font-family: 'Inter', 'Roboto', sans-serif;
+
+
 }
 
 :root {
@@ -32,26 +35,10 @@
     --descount: #d4183d;
     --destructive-foreground: #fff;
     --border: #0000001a;
-    --input: transparent;
-    --input-background: #f3f3f5;
-    --switch-background: #cbced4;
     --font-weight-medium: 500;
     --font-weight-normal: 400;
-    --ring: oklch(.708 0 0);
-    --chart-1: oklch(.646 .222 41.116);
-    --chart-2: oklch(.6 .118 184.704);
-    --chart-3: oklch(.398 .07 227.392);
-    --chart-4: oklch(.828 .189 84.429);
-    --chart-5: oklch(.769 .188 70.08);
     --radius: .625rem;
-    --sidebar: oklch(.985 0 0);
-    --sidebar-foreground: oklch(.145 0 0);
-    --sidebar-primary: #030213;
-    --sidebar-primary-foreground: oklch(.985 0 0);
-    --sidebar-accent: oklch(.97 0 0);
-    --sidebar-accent-foreground: oklch(.205 0 0);
-    --sidebar-border: oklch(.922 0 0);
-    --sidebar-ring: oklch(.708 0 0);
+
     --spacing: 1rem;
     --discoumt: green;
 }
@@ -60,11 +47,13 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
 main {
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
+
 
 .nav-bar {
     width: 100%;
@@ -74,7 +63,7 @@ main {
     align-items: center;
     position: fixed;
     z-index: 1000;
-
+    
 }
 
 nav aside strong {
@@ -567,4 +556,148 @@ footer div div ul li {
     .footer-foot div a {
         font-size: calc(var(--font-size)*1);
     }
+}
+
+
+/* //////hover  */
+
+/* -------- Buttons Hover -------- */
+/* .btn {
+  background: #5C67F2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+} */
+.btn:hover,
+.btn:focus {
+  background: #3B3C83;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(60, 70, 180, 0.2);
+  outline: none;
+}
+
+/* Special Enroll Now Button */
+.enroll-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.enroll-btn:hover,
+.enroll-btn:focus {
+  background-color: #0056b3;
+  transform: scale(1.08);
+  outline: none;
+}
+
+/* -------- Course Cards Hover -------- */
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius); /* Keeps consistent rounding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--background);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.course-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.course-card:hover .card-heading h4 {
+  color: #5C67F2;
+  transition: color 0.3s ease;
+}
+.course-card:hover .price {
+  color: #28a745; /* Matching your tag-level green */
+  transition: color 0.3s ease;
+}
+
+/* -------- Navigation Links Hover -------- */
+.nav-bar a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-bar a:hover,
+.nav-bar a:focus {
+  color: #5C67F2;
+  outline: none;
+}
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #5C67F2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-bar a:hover::after,
+.nav-bar a:focus::after {
+  transform: scaleX(1);
+}
+
+/* -------- Social Media Icons Hover -------- */
+.social-media-p img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.social-media-p a:hover img,
+.social-media-p a:focus img {
+  filter: none;
+  transform: scale(1.2) rotate(-8deg);
+  outline: none;
+}
+
+/* -------- Testimonials Cards Hover -------- */
+.reating-card {
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+  margin: var(--spacing);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+.reating-card:hover,
+.reating-card:focus-within {
+  box-shadow: 0 8px 24px rgba(60, 70, 180, 0.12);
+  transform: translateY(-6px) scale(1.02);
+  outline: none;
+}
+/* Optional: Highlight blockquote on hover */
+.reating-card:hover blockquote,
+.reating-card:focus-within blockquote {
+  color: #5C67F2;
+  transition: color 0.3s ease;
+}
+
+/* -------- Footer Links Hover -------- */
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+footer a:hover,
+footer a:focus {
+  color: #5C67F2;
+  text-decoration: underline;
+  outline: none;
 }
