@@ -96,13 +96,6 @@ nav aside ul li {
     display: none;
 }
 
-
-section {
-    width: 100vw;
-    display: block;
-    /* border-bottom: 2px solid gray; */
-}
-
 .mainBody section:nth-child(even) {
     background-color: var(--background2);
 }
@@ -115,13 +108,12 @@ section {
 /* section home ,about */
 
 section {
+    width: 100vw;
+    display: block;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: calc(var(--spacing)*5) calc(var(--spacing)*2);
-    padding-top: 200px;
-
-    /* margin: auto 10px; */
 }
 
 .about .info,
@@ -197,24 +189,29 @@ main section {
     flex-wrap: nowrap;
 }
 
-#courses p {
+h2+p {
     padding: var(--spacing) 0;
 }
 
-.scrole-parrent::-webkit-scrollbar {
+
+/* /////////////////scrole releted css  */
+.scroll-parent::-webkit-scrollbar {
     height: 8px;
 }
 
-.scrole-parrent::-webkit-scrollbar-thumb {
+.scroll-parent::-webkit-scrollbar-thumb {
     background: #bbb;
     border-radius: 10px;
 }
 
-.scrole-parrent {
+.scroll-parent {
     flex: 0 0 auto;
     scroll-behavior: smooth;
     overflow-x: scroll;
+    width: 100%;
 }
+
+/* scrole related css end here  */
 
 .course-card {
     margin: var(--spacing);
@@ -338,14 +335,6 @@ main section {
 
 /* end of card courses  */
 
-.comments {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing) auto;
-    align-items: center;
-    margin: var(--spacing);
-}
 .reating-card {
     align-self: center;
     width: 45%;
@@ -390,6 +379,61 @@ main section {
     object-fit: none;
     object-position: -250px -140px;
 
+}
+
+/* //////////////////////////our /program section statrs here  */
+.our-program {
+    flex-direction: column;
+}
+
+.check-img-p {
+    padding: 5px;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing)/3);
+
+}
+
+.card-heading {
+    padding: var(--spacing);
+}
+
+.element-p {
+    padding: var(--spacing) auto;
+}
+
+.check-img-p img {
+    height: 30px;
+    width: 30px;
+    padding: 1px;
+}
+
+.std-type {
+    border: 1px solid var(--border);
+    padding: 4px;
+    background-color: oklch(.6 .118 184.704);
+    display: inline-block;
+    /* margin: 10px; */
+}
+
+.our-program .price {
+    font-size: calc(var(--font-size)*3);
+}
+
+.check-img-p img+span {
+    font-size: calc(var(--font-size)*1.3);
+}
+
+.our-program button {
+    border: 2px solid var(--border);
+    margin-bottom: var(--spacing);
+}
+
+.price span {
+    font-size: var(--font-size);
+    color: var(--primary);
 }
 
 /* footer section start  */
