@@ -57,6 +57,7 @@
 
 .btn {
     padding: 10px;
+    margin: calc(var(--spacing)/3*2);
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s
@@ -106,4 +107,7 @@ ul li {
 .text-sm {
     font-size: calc(var(--font-size)*0.9);
 
+}
+.overflow-scroll{
+    overflow: scroll;
 }
