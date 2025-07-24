@@ -41,7 +41,7 @@ project-root/
   ![Hero](./assets/hero-section.png)
 
 - **About Section**  
-  ![About](./assets/about-section.png)
+  ![About](./assets/hero-section.png)
 
 - **Scrollable Courses Section**  
   ![Courses](./assets/course-scroll-section.png)
