@@ -71,3 +71,14 @@ ul li {
     color: black;
     font-size: var(--font-size);
 }
+.svgYellow{
+    color: var(--color-yellow-400);
+    fill: var(--color-yellow-400);
+}
+.font-medium{
+    font-size: calc(var(--font-size)*1.3);
+}
+.text-sm{
+    font-size: calc(var(--font-size)*0.9);
+
+}
